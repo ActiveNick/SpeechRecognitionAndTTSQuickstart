@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grammar version="1.0" 
+         xml:lang="en-US" 
+         root="playCommands"
+         xmlns="http://www.w3.org/2001/06/grammar">
+
+  <rule id="playCommands">
+    <ruleref uri="#playAction" />
+    <item> the </item>
+    <ruleref uri="#fileWords" />
+  </rule>
+
+  <rule id="playAction">
+    <one-of>
+      <item> play </item>
+      <item> start </item>
+      <item> begin </item>
+    </one-of>
+  </rule>
+
+  <rule id="fileWords">
+    <one-of>
+      <item> song </item>
+      <item> tune </item>
+      <item> track </item>
+      <item> item </item>
+    </one-of>
+  </rule>
+
+</grammar>
